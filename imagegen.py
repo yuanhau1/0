@@ -3,9 +3,9 @@ from diffusers import FluxPipeLine
 cpu_or_not = input("Cpu? ")
 prompt = input('Prompt: ')
 save_name = input("File Name: ")
-if cpu_or_not = "yes":
+if cpu_or_not == "yes":
   pipe.enable_model_cpu_offload()
-if cpu_or_not = "no":
+elif cpu_or_not == "no":
   pipe.disable_model_cpu_offload()
 pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.bfloat16)
 image = pipe(
